@@ -1,3 +1,22 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+
+client_prenom:
+    path:       /client/prenom/{name}
+    controller: App\Controller\client::info
+    methods:    GET|HEAD
+    requirements:
+        name: ^[a-z]+(?:-?[a-z]+)+$
+
+images:
+  path: /img/home
+  controller: App\Controller\ImagesController::home
+  requirements:
+    path: .+
+
+images_show:
+  path: /img/data/{path}
+  controller: App\Controller\ImagesController::show
+  requirements:
+    path: .+

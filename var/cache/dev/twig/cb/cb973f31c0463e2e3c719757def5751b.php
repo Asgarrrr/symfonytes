@@ -81,7 +81,6 @@ class __TwigTemplate_3233fd423e48548ecaa1f9d25623007d extends Template
     {
         return new Source("{% for image in images %}
     <li><a class=\"dropdown-item\" href=\"/images/{{ image }}\">{{ image }}</a></li>
-{% endfor %}
-", "img/nav.html.twig", "/Users/asgarrrr/Desktop/ExoSym/symfony/templates/img/nav.html.twig");
+{% endfor %}", "img/nav.html.twig", "/Users/asgarrrr/Desktop/ExoSym/symfony/templates/img/nav.html.twig");
     }
 }

@@ -1,0 +1,7 @@
+form:
+  password:
+    not_same: 'The password fields must match.'
+    not_blank: 'Please enter a password.'
+    min_length: 'The password is too short. It should have {{ limit }} characters or more.'
+    firstLabel: "Password"
+    secondLabel: "Confirm password"

@@ -75,6 +75,23 @@ class __TwigTemplate_6e0aa3e3cebfee0c625fb58e816fc69b extends Template
                         </li>
                     </ul>
                 </div>
+                <ul class=\"nav text-secondary\">
+                    ";
+        // line 33
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
+            // line 34
+            echo "                        <li class=\"nav-item\"><a href=\"#\" class=\"text-decoration-none text-secondary px-2\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 34, $this->source); })()), "user", [], "any", false, false, false, 34), "email", [], "any", false, false, false, 34), "html", null, true);
+            echo "</a></li>
+                    ";
+        } else {
+            // line 36
+            echo "                        <li class=\"nav-item\"><a href=\"/login\" class=\"text-decoration-none text-secondary px-2\">Login</a></li>
+                        <li class=\"nav-item\"><a href=\"/register\" class=\"text-decoration-none text-secondary px-2\">Sign up</a></li>
+                    ";
+        }
+        // line 39
+        echo "                </ul>
             </div>
         </nav>
 
@@ -82,9 +99,9 @@ class __TwigTemplate_6e0aa3e3cebfee0c625fb58e816fc69b extends Template
             <div class=\"row\">
                 <div class=\"col-12\">
                     ";
-        // line 38
+        // line 46
         $this->displayBlock('body', $context, $blocks);
-        // line 40
+        // line 48
         echo "                </div>
             </div>
 
@@ -100,7 +117,7 @@ class __TwigTemplate_6e0aa3e3cebfee0c625fb58e816fc69b extends Template
 
     }
 
-    // line 38
+    // line 46
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -110,7 +127,7 @@ class __TwigTemplate_6e0aa3e3cebfee0c625fb58e816fc69b extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 39
+        // line 47
         echo "                    ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -132,7 +149,7 @@ class __TwigTemplate_6e0aa3e3cebfee0c625fb58e816fc69b extends Template
 
     public function getDebugInfo()
     {
-        return array (  114 => 39,  104 => 38,  88 => 40,  86 => 38,  72 => 27,  44 => 1,);
+        return array (  131 => 47,  121 => 46,  105 => 48,  103 => 46,  94 => 39,  89 => 36,  83 => 34,  81 => 33,  72 => 27,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -168,6 +185,14 @@ class __TwigTemplate_6e0aa3e3cebfee0c625fb58e816fc69b extends Template
                         </li>
                     </ul>
                 </div>
+                <ul class=\"nav text-secondary\">
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                        <li class=\"nav-item\"><a href=\"#\" class=\"text-decoration-none text-secondary px-2\">{{ app.user.email }}</a></li>
+                    {% else %}
+                        <li class=\"nav-item\"><a href=\"/login\" class=\"text-decoration-none text-secondary px-2\">Login</a></li>
+                        <li class=\"nav-item\"><a href=\"/register\" class=\"text-decoration-none text-secondary px-2\">Sign up</a></li>
+                    {% endif %}
+                </ul>
             </div>
         </nav>
 

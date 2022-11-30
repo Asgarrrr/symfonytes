@@ -14,8 +14,14 @@ return [
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/xdebug' => [[['_route' => '_profiler_xdebug', '_controller' => 'web_profiler.controller.profiler::xdebugAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
-        '/client' => [[['_route' => 'index', '_controller' => 'App\\Controller\\client::index'], null, null, null, false, false, null]],
+        '/test' => [[['_route' => 'kernel_controller', 'ouverture' => '10/18', '_controller' => 'App\\Controller\\Acceuil::home'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'image', '_controller' => 'App\\Controller\\ImageController::index'], null, null, null, false, false, null]],
+        '/login' => [
+            [['_route' => 'app_login', '_controller' => 'App\\Controller\\LoginController::index'], null, null, null, false, false, null],
+            [['_route' => 'login', '_controller' => 'App\\Controller\\LoginController::login'], null, ['GET' => 0, 'POST' => 1], null, false, false, null],
+        ],
+        '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
+        '/client' => [[['_route' => 'index', '_controller' => 'App\\Controller\\client::index'], null, null, null, false, false, null]],
         '/img/home' => [[['_route' => 'images', '_controller' => 'App\\Controller\\ImagesController::home'], null, null, null, false, false, null]],
     ],
     [ // $regexpList

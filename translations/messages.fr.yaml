@@ -1,0 +1,7 @@
+form:
+  password:
+    not_same: 'Les champs du mot de passe doivent correspondre.'
+    not_blank: 'Veuillez entrer un mot de passe'
+    min_length: 'Le mot de passe est trop court. Il doit comporter {{ limite }} caractères ou plus.'
+    firstLabel: "Mot de passe"
+    secondLabel: "Confirmez le mot de passe"

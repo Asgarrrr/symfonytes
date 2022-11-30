@@ -5,7 +5,7 @@
     use Symfony\Component\HttpFoundation\Response;
     use Symfony\Component\Routing\Annotation\Route;
 
-    class client {
+    class Client {
 
         #[Route("/client", name: "index")]
 
